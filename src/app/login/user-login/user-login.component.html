@@ -1,0 +1,20 @@
+<h2>Please login!</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label for="username">
+    User name:
+    <input name='username' formControlName="userName" type="text">
+  </label>
+  <br>
+  <span class="danger" *ngIf="loginForm?.controls.userName.dirty && !loginForm?.controls.userName.valid">User name required!</span>
+  <br>
+  <label for="password">
+    Password:
+    <input name='password' formControlName="password" type="password">
+  </label>
+  <br>
+  <span class="danger" *ngIf="loginForm?.controls.password.dirty && !loginForm?.controls.password.valid">Password required!</span>
+  <br>
+  <button [disabled]="!loginForm.valid" type="submit">Login</button>
+</form>
+

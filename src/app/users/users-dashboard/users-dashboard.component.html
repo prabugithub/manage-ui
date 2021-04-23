@@ -1,0 +1,16 @@
+<a href="javascript:void(0)" (click)="showUserDetails()">User Details</a>
+<a href="javascript:void(0)" (click)="showCreateUsers()">Create User</a>
+
+<button (click)="showUserDetails()">User Details</button>
+<button (click)="showCreateUsers()">Create User</button>
+<br/>
+<br/>
+<label for="search" *ngIf="showUserDetail">
+    Search User:
+    <input type="text" name="search" id="search" [(ngModel)]="searchText">
+</label>
+<br/>
+<app-create-user-credentials *ngIf="showCreateUser"></app-create-user-credentials>
+<app-user-details *ngIf="showUserDetail" [userDetails]='userDetails'></app-user-details>
+
+<!-- <router-outlet></router-outlet> -->

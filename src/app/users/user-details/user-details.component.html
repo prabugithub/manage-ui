@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Designation</th>
+  </tr>
+  <tr *ngFor='let user of userDetails'>
+    <td style="padding: 10px;">{{user.name}}</td>
+    <td style="padding: 10px;">{{user.age}}</td>
+    <td style="padding: 10px;">{{user.email}}</td>
+    <td style="padding: 10px;">{{user.workingPosition}}</td>
+  </tr>
+</table>
